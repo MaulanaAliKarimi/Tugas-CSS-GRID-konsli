@@ -1,0 +1,120 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr 1.5fr 0.5fr;
+    grid-template-areas: 
+    "header header header header header header"
+    "nav nav nav nav nav nav"
+    "item-1 item-2 item-3 item-4 item-5 item-6"
+    "item-7 item-7 item-7 item-7 item-8 item-8"
+    "item-7 item-7 item-7 item-7 item-8 item-8"
+    "footer footer footer footer footer footer";
+    text-transform: uppercase;
+    text-align: center;
+    grid-gap: 1em;
+}
+
+header {
+    background-color: aqua;
+    grid-area: header;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+nav {
+    background-color: lightblue;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#item-1 {
+    background-color: blueviolet;
+    grid-area: item-1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#item-2 {
+    background-color: blue;
+    grid-area: item-2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#item-3 {
+    background-color: slateblue;
+    grid-area: item-3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#item-4 {
+    background-color: brown;
+    grid-area: item-4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#item-5 {
+    background-color: lightgreen;
+    grid-area: item-5;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#item-6 {
+    background-color: yellow;
+    grid-area: item-6;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#item-7 {
+    background-color: green;
+    grid-area: item-7;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#item-8 {
+    background-color: palevioletred;
+    grid-area: item-8;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+footer {
+    background-color: red;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+@media (max-width: 800px) {
+    .container {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr; /* satu kolom di perangkat mobile */
+        grid-template-rows: 0.4fr 0.4fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 2.2fr 0.5fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4"
+        "item-5"
+        "item-6"
+        "item-7"
+        "item-8"
+        "footer";
+        grid-gap: 1em;
+    }
+}
